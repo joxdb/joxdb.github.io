@@ -4,9 +4,10 @@
   "description": "joxdb",
   "main": "eslint.config.js",
   "type": "module",
+  "homepage": "https://joxdb.github.io",
 
 "keywords": [
-  "cybersecurity courses", "landing page", "Courses"],
+  "dbms", "redis", "nosql"],
   
   "author": "", 
    "scripts": {
@@ -16,7 +17,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "predeploy" : "vite build"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
