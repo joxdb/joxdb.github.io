@@ -52,7 +52,7 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between px-4">
         <img className="w-16  h-16 object-contain" src="/logo/joxdb-square-logo-bg-removed.png"/>
         <a href="#" className="text-xl font-bold glow-text">
-          JoxDB 1.0
+          JoxDB v1.0
         </a>
 
         {/* Desktop */}
