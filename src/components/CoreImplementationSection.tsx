@@ -33,7 +33,7 @@ const CoreImplementationSection = () => (
                 <Code2 size={24} />
               </div>
               <div>
-                <p className="text-lg font-semibold">99% of it's core implementation is written by a Human</p>
+                <p className="text-lg font-semibold">99% of it's <strong className="tracking-wider">'core implementation'</strong> is written by a Human</p>
               </div>
             </div>
           </div>
