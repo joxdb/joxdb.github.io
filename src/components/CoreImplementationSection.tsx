@@ -1,21 +1,19 @@
-import { Bot, Code2, ShieldCheck, UserRoundCheck } from "lucide-react";
+import { Bot, Code2, UserRoundCheck } from "lucide-react"
 
 const implementationStats = [
   {
     label: "Human written code",
     value: "99%",
-    icon: UserRoundCheck,
     accent: "text-primary",
     bar: "bg-primary",
   },
   {
     label: "AI-assisted code",
     value: "1%",
-    icon: Bot,
     accent: "text-secondary",
-    bar: "bg-secondary"
+    bar: "bg-secondary",
   },
-];
+]
 
 const CoreImplementationSection = () => (
   <section className="section-padding">
@@ -33,29 +31,53 @@ const CoreImplementationSection = () => (
                 <Code2 size={24} />
               </div>
               <div>
-                <p className="text-lg font-semibold">99% of it's <strong className="tracking-wider">'core implementation'</strong> is written by a Human</p>
+                <p className="text-lg font-semibold">
+                  99% of it's <strong className="tracking-wider">'core implementation'</strong> is
+                  written by a Human
+                </p>
               </div>
             </div>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
-            {implementationStats.map(({ label, value, icon: Icon, accent, bar }) => (
-              <div key={label} className="rounded-xl border border-primary/15 bg-background/30 p-5">
-                <div className="mb-4 flex items-center justify-between gap-4">
-                  <Icon className={accent} size={30} />
-                  <span className={`text-4xl font-extrabold ${accent}`}>{value}</span>
-                </div>
-                <p className="font-semibold">{label}</p>
-                <div className="mt-4 h-2 overflow-hidden rounded-full bg-muted">
-                  <div className={`h-full ${bar}`} style={{ width: value }} />
-                </div>
+          <div className="rounded-xl border border-primary/15 bg-background/30 p-5">
+            {/* Labels row: icon + value on each end */}
+            <div className="mb-3 flex items-center justify-between gap-4">
+              <div className="flex items-center gap-2">
+                <UserRoundCheck className={implementationStats[0].accent} size={22} />
+                <span className={`text-2xl font-extrabold ${implementationStats[0].accent}`}>
+                  {implementationStats[0].value}
+                </span>
               </div>
-            ))}
+              <div className="flex items-center gap-2">
+                <span className={`text-2xl font-extrabold ${implementationStats[1].accent}`}>
+                  {implementationStats[1].value}
+                </span>
+                <Bot className={implementationStats[1].accent} size={22} />
+              </div>
+            </div>
+
+            {/* Single continuous split bar */}
+            <div className="flex h-3 w-full overflow-hidden rounded-full bg-muted">
+              {implementationStats.map(({ label, value, bar }) => (
+                <div
+                  key={label}
+                  className={bar}
+                  style={{ width: value }}
+                  title={`${label}: ${value}`}
+                />
+              ))}
+            </div>
+
+            {/* Labels below the bar */}
+            <div className="mt-3 flex items-center justify-between gap-4 text-xs text-muted-foreground">
+              <span>{implementationStats[0].label}</span>
+              <span>{implementationStats[1].label}</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-);
+)
 
-export default CoreImplementationSection;
+export default CoreImplementationSection
