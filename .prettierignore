@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+dist/
+build/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Version control
+.git/
+.github/
+.gitignore
+
+# Package managers
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Logs
+*.log
+
+# Coverage
+coverage/
+
+# IDE
+.vscode/
+.idea/
+
+# Build output
+out/
+.next/
+
+# Markdown
+*.md
