@@ -1,47 +1,47 @@
-import { useState, useEffect } from "react";
-import { Menu, X, Moon, Sun } from "lucide-react";
+import { useState, useEffect } from "react"
+import { Menu, X, Moon, Sun } from "lucide-react"
 
 const navLinks = [
   ["Features", "#features"],
   ["Developer", "#developer"],
   ["Docs", "https://joxdb.gitbook.io"],
-  ["GitHub" , "https://github.com/saksham-joshi/JoxDB"],
-  ["FAQ", "#faq"]
-];
+  ["GitHub", "https://github.com/saksham-joshi/JoxDB"],
+  ["FAQ", "#faq"],
+]
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [isDark, setIsDark] = useState(true);
+  const [isOpen, setIsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const [isDark, setIsDark] = useState(true)
 
   useEffect(() => {
-    const saved = localStorage.getItem("theme");
+    const saved = localStorage.getItem("theme")
     if (saved === "light") {
-      document.documentElement.classList.remove("dark");
-      document.documentElement.classList.add("light");
-      setIsDark(false);
+      document.documentElement.classList.remove("dark")
+      document.documentElement.classList.add("light")
+      setIsDark(false)
     }
-  }, []);
+  }, [])
 
   useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handler);
-    return () => window.removeEventListener("scroll", handler);
-  }, []);
+    const handler = () => setScrolled(window.scrollY > 20)
+    window.addEventListener("scroll", handler)
+    return () => window.removeEventListener("scroll", handler)
+  }, [])
 
   const toggleTheme = () => {
-    const next = !isDark;
-    setIsDark(next);
+    const next = !isDark
+    setIsDark(next)
     if (next) {
-      document.documentElement.classList.add("dark");
-      document.documentElement.classList.remove("light");
-      localStorage.setItem("theme", "dark");
+      document.documentElement.classList.add("dark")
+      document.documentElement.classList.remove("light")
+      localStorage.setItem("theme", "dark")
     } else {
-      document.documentElement.classList.remove("dark");
-      document.documentElement.classList.add("light");
-      localStorage.setItem("theme", "light");
+      document.documentElement.classList.remove("dark")
+      document.documentElement.classList.add("light")
+      localStorage.setItem("theme", "light")
     }
-  };
+  }
 
   return (
     <nav
@@ -50,7 +50,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4">
-        <img className="w-16  h-16 object-contain" src="/logo/joxdb-square-logo-bg-removed.png"/>
+        <img className="w-16  h-16 object-contain" src="/logo/joxdb-square-logo-bg-removed.png" />
         <a href="#" className="text-xl font-bold glow-text">
           JoxDB <span className="secondary-color-text">v1.0</span>
         </a>
@@ -109,7 +109,7 @@ const Navbar = () => {
         </div>
       )}
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

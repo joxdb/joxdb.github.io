@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import { Check } from "lucide-react"
 import WindowsIcon from "@/assets/windows.png"
 import LinuxIcon from "@/assets/linux.png"
 
@@ -7,15 +7,15 @@ const plans = [
     os: "Windows",
     arch: "x64",
     icon: WindowsIcon,
-    downloadLink: ""
+    downloadLink: "",
   },
   {
     os: "Linux",
     arch: "x64",
     icon: LinuxIcon,
-    downloadLink: ""
+    downloadLink: "",
   },
-];
+]
 
 const DownloadSection = () => (
   <section id="download" className="section-padding gradient-bg">
@@ -26,10 +26,7 @@ const DownloadSection = () => (
       </h2>
       <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
         {plans.map((p) => (
-          <div
-            key={p.os}
-            className="glass-card-hover p-8 flex flex-col relative"
-          >
+          <div key={p.os} className="glass-card-hover p-8 flex flex-col relative">
             <h2 className="text-xl font-bold mb-2 secondary-color-text">{p.os}</h2>
             <p className="text-3xl font-extrabold glow-text mb-6">{p.arch}</p>
             <img className="w-48 h-48 ml-auto mr-auto" src={p.icon} />
@@ -44,6 +41,6 @@ const DownloadSection = () => (
       </div>
     </div>
   </section>
-);
+)
 
-export default DownloadSection;
+export default DownloadSection

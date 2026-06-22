@@ -11,7 +11,7 @@ const designDetails = [
     title: "Components",
     items: ["Jox Query Language (JQL)", "JQL Engine", "Jox's CLI", "Jox's Server"],
   },
-];
+]
 
 const DesignSection = () => (
   <section className="section-padding gradient-bg">
@@ -22,10 +22,7 @@ const DesignSection = () => (
       </h2>
       <div className="grid md:grid-cols-3 gap-6">
         {designDetails.map((p) => (
-          <div
-            key={p.title}
-            className="glass-card-hover p-8 flex flex-col"
-          >
+          <div key={p.title} className="glass-card-hover p-8 flex flex-col">
             <h3 className="text-xl font-bold mb-4 glow-text">{p.title}</h3>
             <ul className="space-y-2 text-muted-foreground">
               {p.items.map((item) => (
@@ -40,6 +37,6 @@ const DesignSection = () => (
       </div>
     </div>
   </section>
-);
+)
 
-export default DesignSection;
+export default DesignSection

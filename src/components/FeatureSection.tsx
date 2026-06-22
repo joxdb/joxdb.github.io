@@ -1,4 +1,12 @@
-import { Shield, CloudLightning, MemoryStick, Cpu, HardDriveDownload, Target, BookText } from "lucide-react";
+import {
+  Shield,
+  CloudLightning,
+  MemoryStick,
+  Cpu,
+  HardDriveDownload,
+  Target,
+  BookText,
+} from "lucide-react"
 
 const skills = [
   { icon: Shield, title: "Extremely Secure" },
@@ -7,7 +15,7 @@ const skills = [
   { icon: Cpu, title: "Low Power Usage" },
   { icon: HardDriveDownload, title: "Easy to setup" },
   { icon: BookText, title: "Easy documentations" },
-];
+]
 
 const FeatureSection = () => (
   <section id="features" className="section-padding">
@@ -26,6 +34,6 @@ const FeatureSection = () => (
       </div>
     </div>
   </section>
-);
+)
 
-export default FeatureSection;
+export default FeatureSection

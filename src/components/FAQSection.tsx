@@ -3,15 +3,30 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
+} from "@/components/ui/accordion"
 
 const faqs = [
-  { q: "How can I start using JoxDB?", a: "You can self-host it on a server or install it along with your application as an external dependency. If you are developing your project in C or C++, then you can directly use it's engine source code which is itself written in C." },
-  { q: "Is JoxDB available for all OS?", a: "Currently it is available for only Windows and Linux (nearly all distros)." },
-  { q: "What is the actual advantage of using JoxDB?", a: "High-throughput + Low memory usage + Low power usage + Stability + Native-language (JQL) for operations." },
-  { q: "Is this beginner friendly?", a: "Absolutely! Integrating JoxDB with your projects will be quite easy and a great experience for you." },
-  { q: "Can I customize it?", a: "Of course, you can! It is open source. If you make any good changes, you can raise a PR at JoxDB's official repository on GitHub." },
-];
+  {
+    q: "How can I start using JoxDB?",
+    a: "You can self-host it on a server or install it along with your application as an external dependency. If you are developing your project in C or C++, then you can directly use it's engine source code which is itself written in C.",
+  },
+  {
+    q: "Is JoxDB available for all OS?",
+    a: "Currently it is available for only Windows and Linux (nearly all distros).",
+  },
+  {
+    q: "What is the actual advantage of using JoxDB?",
+    a: "High-throughput + Low memory usage + Low power usage + Stability + Native-language (JQL) for operations.",
+  },
+  {
+    q: "Is this beginner friendly?",
+    a: "Absolutely! Integrating JoxDB with your projects will be quite easy and a great experience for you.",
+  },
+  {
+    q: "Can I customize it?",
+    a: "Of course, you can! It is open source. If you make any good changes, you can raise a PR at JoxDB's official repository on GitHub.",
+  },
+]
 
 const FAQSection = () => (
   <section id="faq" className="section-padding gradient-bg">
@@ -26,14 +41,12 @@ const FAQSection = () => (
             <AccordionTrigger className="text-left font-semibold hover:no-underline">
               {f.q}
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground">
-              {f.a}
-            </AccordionContent>
+            <AccordionContent className="text-muted-foreground">{f.a}</AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>
     </div>
   </section>
-);
+)
 
-export default FAQSection;
+export default FAQSection

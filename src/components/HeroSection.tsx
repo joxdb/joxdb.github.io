@@ -1,5 +1,5 @@
 interface HeroSectionProps {
-  onOpenModal?: () => void;
+  onOpenModal?: () => void
 }
 
 const floatingLogos = [
@@ -23,7 +23,7 @@ const floatingLogos = [
   { top: "88%", left: "14%", size: 30, duration: 16, delay: -5 },
   { top: "86%", left: "39%", size: 38, duration: 19, delay: -12 },
   { top: "90%", left: "69%", size: 32, duration: 14, delay: -1 },
-] as const;
+] as const
 
 const HeroSection = ({ onOpenModal }: HeroSectionProps) => (
   <section className="relative min-h-screen flex items-center justify-center overflow-hidden section-padding pt-32">
@@ -57,7 +57,9 @@ const HeroSection = ({ onOpenModal }: HeroSectionProps) => (
           Download
         </a>
         <button
-          onClick={() => { window.open("https://github.com/saksham-joshi/JoxDB", "_blank", "noopener,noreferrer")}}
+          onClick={() => {
+            window.open("https://github.com/saksham-joshi/JoxDB", "_blank", "noopener,noreferrer")
+          }}
           className="px-8 py-4 rounded-lg border border-primary/30 text-foreground font-semibold hover:bg-primary/10 transition-all duration-300"
         >
           View on GitHub
@@ -68,6 +70,6 @@ const HeroSection = ({ onOpenModal }: HeroSectionProps) => (
       </p>
     </div>
   </section>
-);
+)
 
-export default HeroSection;
+export default HeroSection

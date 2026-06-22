@@ -79,7 +79,7 @@
   }
   body {
     @apply bg-background text-foreground font-sans;
-    font-family: 'Golos Text', sans-serif;
+    font-family: "Golos Text", sans-serif;
   }
   html {
     scroll-behavior: smooth;
@@ -108,21 +108,29 @@
   }
   .glass-card-hover:hover {
     border-color: hsl(var(--primary) / 0.4);
-    box-shadow: 0 0 30px hsl(var(--glow-cyan) / 0.15), 0 0 45px hsl(var(--glow-pink) / 0.08);
+    box-shadow:
+      0 0 30px hsl(var(--glow-cyan) / 0.15),
+      0 0 45px hsl(var(--glow-pink) / 0.08);
     transform: translateY(-4px);
   }
   .glow-button {
     @apply text-primary-foreground font-semibold rounded-lg px-6 py-3 transition-all duration-300;
     background-color: hsl(var(--primary));
-    box-shadow: 0 0 20px hsl(var(--glow-cyan) / 0.35), 0 0 28px hsl(var(--glow-pink) / 0.2);
+    box-shadow:
+      0 0 20px hsl(var(--glow-cyan) / 0.35),
+      0 0 28px hsl(var(--glow-pink) / 0.2);
   }
   .glow-button:hover {
-    box-shadow: 0 0 40px hsl(var(--glow-cyan) / 0.55), 0 0 56px hsl(var(--glow-pink) / 0.28);
+    box-shadow:
+      0 0 40px hsl(var(--glow-cyan) / 0.55),
+      0 0 56px hsl(var(--glow-pink) / 0.28);
     transform: translateY(-2px);
   }
   .glow-text {
     color: hsl(var(--primary));
-    text-shadow: 0 0 12px hsl(var(--glow-cyan) / 0.2), 0 0 14px hsl(var(--glow-pink) / 0.1);
+    text-shadow:
+      0 0 12px hsl(var(--glow-cyan) / 0.2),
+      0 0 14px hsl(var(--glow-pink) / 0.1);
   }
   .primary-color-text {
     color: hsl(var(--primary));
@@ -140,7 +148,8 @@
   }
 
   @keyframes float {
-    0%, 100% {
+    0%,
+    100% {
       transform: translate(0, 0) rotate(0deg);
     }
     33% {
